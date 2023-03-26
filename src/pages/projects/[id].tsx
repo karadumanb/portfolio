@@ -42,7 +42,7 @@ function ProjectSingle({ project }: Props) {
             <div className="mb-10 sm:mb-0" key={image.id}>
               <Image
                 src={getImageUrl(image.img)}
-                className="rounded-xl cursor-pointer shadow-lg sm:shadow-none"
+                className="rounded-xl cursor-pointer shadow-lg sm:shadow-none w-full h-auto"
                 alt={image.title}
                 key={image.id}
                 width={100}

@@ -28,9 +28,8 @@ const ProjectSingle = ({ project }: Props) => {
           <div>
             <Image
               src={getImageUrl(project.img)}
-              className="rounded-t-xl border-none"
+              className="rounded-t-xl border-none w-full h-auto"
               alt="Single Project"
-              fill
               width={100}
               height={90}
             />
