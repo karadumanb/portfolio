@@ -1,3 +1,4 @@
+import { getImageUrl } from '@/services/image';
 import Image from 'next/image';
 
 const RelatedProject = {
@@ -6,22 +7,22 @@ const RelatedProject = {
 		{
 			id: 1,
 			title: 'Mobile UI',
-			img: '/images/ui-project-2.jpg',
+			img: 'ui-project-2.jpg',
 		},
 		{
 			id: 3,
 			title: 'Web Application',
-			img: '/images/mobile-project-1.jpg',
+			img: 'mobile-project-1.jpg',
 		},
 		{
 			id: 3,
 			title: 'UI Design',
-			img: '/images/web-project-1.jpg',
+			img: 'web-project-1.jpg',
 		},
 		{
 			id: 4,
 			title: 'Kabul Mobile App UI',
-			img: '/images/mobile-project-2.jpg',
+			img: 'mobile-project-2.jpg',
 		},
 	],
 };
@@ -37,7 +38,7 @@ function RelatedProjects() {
 				{RelatedProject.Projects.map((project) => {
 					return (
 						<Image
-							src={project.img}
+							src={getImageUrl(project.img)}
 							className="rounded-xl cursor-pointer"
 							width="400"
 							height="400"

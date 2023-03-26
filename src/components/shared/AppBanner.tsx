@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import { getImageUrl } from '@/services/image';
 import { motion } from 'framer-motion';
 import { FiArrowDownCircle } from 'react-icons/fi';
 import useThemeSwitcher from '../../hooks/useThemeSwitcher';
@@ -68,11 +69,11 @@ function AppBanner() {
 				className="w-full sm:w-2/3 text-right float-right mt-8 sm:mt-0"
 			>
 				<img
-					src={
+					src={getImageUrl(
 						activeTheme === 'dark'
-							? '/images/developer.svg'
-							: '/images/developer-dark.svg'
-					}
+							? 'developer.svg'
+							: 'developer-dark.svg'
+					)}
 					alt="Developer"
 				/>
 			</motion.div>

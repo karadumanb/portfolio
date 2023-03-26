@@ -1,3 +1,4 @@
+import { getImageUrl } from '@/services/image';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -28,7 +29,7 @@ const ProjectSingle = ({ project }: Props) => {
 				<div className="rounded-xl shadow-lg hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-secondary-light dark:bg-ternary-dark">
 					<div>
 						<Image
-							src={project.img}
+							src={getImageUrl(project.img)}
 							className="rounded-t-xl border-none"
 							alt="Single Project"
 							width={100}
