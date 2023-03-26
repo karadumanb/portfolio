@@ -1,14 +1,14 @@
-import PagesMetaHead from '@/components/shared/PagesMetaHead';
-import ProjectsGrid from '@/modules/projects/Grid';
+import PagesMetaHead from '@/components/shared/PagesMetaHead'
+import ProjectsGrid from '@/modules/projects/Grid'
 
 function index() {
-	return (
-		<div className="container mx-auto">
-			<PagesMetaHead title="Projects" />
+  return (
+    <div className="container mx-auto">
+      <PagesMetaHead title="Projects" />
 
-			<ProjectsGrid />
-		</div>
-	);
+      <ProjectsGrid />
+    </div>
+  )
 }
 
-export default index;
+export default index

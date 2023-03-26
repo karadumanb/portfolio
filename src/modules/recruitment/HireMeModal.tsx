@@ -1,13 +1,8 @@
-import Button from '@/components/general/Button';
-import { motion } from 'framer-motion';
-import { FiX } from 'react-icons/fi';
+import Button from '@/components/general/Button'
+import { motion } from 'framer-motion'
+import { FiX } from 'react-icons/fi'
 
-const selectOptions = [
-  'Web Application',
-  'Mobile Application',
-  'UI/UX Design',
-  'Branding',
-];
+const selectOptions = ['Web Application', 'Mobile Application', 'UI/UX Design', 'Branding']
 
 type Props = {
   onClose: () => void
@@ -20,8 +15,7 @@ function HireMeModal({ onClose, onRequest }: Props) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="font-general-medium fixed inset-0 z-30 transition-all duration-500"
-    >
+      className="font-general-medium fixed inset-0 z-30 transition-all duration-500">
       {/* Modal Backdrop */}
       <div className="bg-filter bg-black bg-opacity-50 fixed inset-0 w-full h-full z-20"></div>
 
@@ -35,18 +29,16 @@ function HireMeModal({ onClose, onRequest }: Props) {
               </h5>
               <button
                 onClick={onClose}
-                className="px-4 font-bold text-primary-dark dark:text-primary-light"
-              >
+                className="px-4 font-bold text-primary-dark dark:text-primary-light">
                 <FiX className="text-3xl" />
               </button>
             </div>
             <div className="modal-body p-5 w-full h-full">
               <form
                 onSubmit={(e) => {
-                  e.preventDefault();
+                  e.preventDefault()
                 }}
-                className="max-w-xl m-4 text-left"
-              >
+                className="max-w-xl m-4 text-left">
                 <div className="">
                   <input
                     className="w-full px-5 py-2 border dark:border-secondary-dark rounded-md text-md bg-secondary-light dark:bg-ternary-dark text-primary-dark dark:text-ternary-light"
@@ -75,13 +67,9 @@ function HireMeModal({ onClose, onRequest }: Props) {
                     id="subject"
                     name="subject"
                     required
-                    aria-label="Project Category"
-                  >
+                    aria-label="Project Category">
                     {selectOptions.map((option) => (
-                      <option
-                        className="text-normal sm:text-md"
-                        key={option}
-                      >
+                      <option className="text-normal sm:text-md" key={option}>
                         {option}
                       </option>
                     ))}
@@ -96,8 +84,7 @@ function HireMeModal({ onClose, onRequest }: Props) {
                     cols={14}
                     rows={6}
                     aria-label="Details"
-                    placeholder="Project description"
-                  ></textarea>
+                    placeholder="Project description"></textarea>
                 </div>
 
                 <div className="mt-6 pb-4 sm:pb-1">
@@ -112,8 +99,7 @@ function HireMeModal({ onClose, onRequest }: Props) {
 											hover:bg-indigo-600
 											rounded-md
 											focus:ring-1 focus:ring-indigo-900 duration-500"
-                    aria-label="Submit Request"
-                  >
+                    aria-label="Submit Request">
                     <Button title="Send Request" />
                   </span>
                 </div>
@@ -127,8 +113,7 @@ function HireMeModal({ onClose, onRequest }: Props) {
 									py-2 bg-gray-600 text-primary-light hover:bg-ternary-dark dark:bg-gray-200 dark:text-secondary-dark dark:hover:bg-primary-light
 									rounded-md
 									focus:ring-1 focus:ring-indigo-900 duration-500"
-                aria-label="Close Modal"
-              >
+                aria-label="Close Modal">
                 <Button title="Close" />
               </span>
             </div>
@@ -136,7 +121,7 @@ function HireMeModal({ onClose, onRequest }: Props) {
         </div>
       </main>
     </motion.div>
-  );
+  )
 }
 
-export default HireMeModal;
+export default HireMeModal

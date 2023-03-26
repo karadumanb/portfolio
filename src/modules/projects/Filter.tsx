@@ -1,21 +1,16 @@
-const selectOptions = [
-	'Web Application',
-	'Mobile Application',
-	'UI/UX Design',
-	'Branding',
-];
+const selectOptions = ['Web Application', 'Mobile Application', 'UI/UX Design', 'Branding']
 
 type Props = {
-	onChange: (value: string) => void
+  onChange: (value: string) => void
 }
 
 function ProjectsFilter({ onChange }: Props) {
-	return (
-		<select
-			onChange={(e) => {
-				onChange(e.target.value);
-			}}
-			className="
+  return (
+    <select
+      onChange={(e) => {
+        onChange(e.target.value)
+      }}
+      className="
                 px-4
                 sm:px-6
                 py-2
@@ -29,19 +24,16 @@ function ProjectsFilter({ onChange }: Props) {
                 dark:bg-ternary-dark
                 text-primary-dark
                 dark:text-ternary-light
-            "
-		>
-			<option className="text-sm sm:text-md">
-				All Projects
-			</option>
+            ">
+      <option className="text-sm sm:text-md">All Projects</option>
 
-			{selectOptions.map((option) => (
-				<option className="text-normal sm:text-md" key={option}>
-					{option}
-				</option>
-			))}
-		</select>
-	);
+      {selectOptions.map((option) => (
+        <option className="text-normal sm:text-md" key={option}>
+          {option}
+        </option>
+      ))}
+    </select>
+  )
 }
 
-export default ProjectsFilter;
+export default ProjectsFilter

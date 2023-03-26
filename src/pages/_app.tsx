@@ -1,8 +1,8 @@
-import DefaultLayout from '@/components/layout/DefaultLayout';
-import UseScrollToTop from '@/hooks/useScrollToTop';
-import '@/styles/globals.css';
-import { AnimatePresence } from 'framer-motion';
-import type { AppProps } from 'next/app';
+import DefaultLayout from '@/components/layout/DefaultLayout'
+import UseScrollToTop from '@/hooks/useScrollToTop'
+import '@/styles/globals.css'
+import { AnimatePresence } from 'framer-motion'
+import type { AppProps } from 'next/app'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -16,4 +16,3 @@ export default function App({ Component, pageProps }: AppProps) {
     </AnimatePresence>
   )
 }
-

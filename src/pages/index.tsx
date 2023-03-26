@@ -1,8 +1,8 @@
-import Link from 'next/link';
-import PagesMetaHead from '@/components/shared/PagesMetaHead';
-import ProjectsGrid from '@/modules/projects/Grid';
-import Button from '@/components/general/Button';
-import AppBanner from '@/components/shared/AppBanner';
+import Link from 'next/link'
+import PagesMetaHead from '@/components/shared/PagesMetaHead'
+import ProjectsGrid from '@/modules/projects/Grid'
+import Button from '@/components/general/Button'
+import AppBanner from '@/components/shared/AppBanner'
 
 export default function Home() {
   return (
@@ -18,5 +18,5 @@ export default function Home() {
         </div>
       </div>
     </div>
-  );
+  )
 }
