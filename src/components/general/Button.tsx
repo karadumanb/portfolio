@@ -1,9 +1,11 @@
-type Props = {
+import { ButtonHTMLAttributes, DetailedHTMLProps } from "react";
+
+interface Props extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
 	title: string
 }
 
-function Button({ title }: Props) {
-	return <button>{title}</button>;
+function Button({ title, ...others }: Props) {
+	return <button {...others}>{title}</button>;
 }
 
 export default Button;
