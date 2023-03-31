@@ -1,4 +1,4 @@
-import HireMeModal from '@/modules/recruitment/HireMeModal'
+import ContactMeModal from '@/modules/contacts/ContactMeModal'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -21,7 +21,7 @@ function AppHeader() {
     }
   }
 
-  function showHireMeModal() {
+  function showContactMeButton() {
     if (!showModal) {
       document.getElementsByTagName('html')[0].classList.add('overflow-y-hidden')
       setShowModal(true)
@@ -117,10 +117,10 @@ function AppHeader() {
           </div>
           <div className="border-t-2 pt-3 sm:pt-0 sm:border-t-0 border-primary-light dark:border-secondary-dark">
             <button
-              onClick={showHireMeModal}
+              onClick={showContactMeButton}
               className="font-general-medium sm:hidden block text-left text-md bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-sm px-4 py-2 mt-2 duration-300 w-24"
-              aria-label="Hire Me Button">
-              Hire Me
+              aria-label="Contact Me Button">
+              Contact Me
             </button>
           </div>
         </div>
@@ -149,10 +149,10 @@ function AppHeader() {
         <div className="hidden sm:flex justify-between items-center flex-col md:flex-row">
           <div className="hidden md:flex">
             <button
-              onClick={showHireMeModal}
+              onClick={showContactMeButton}
               className="text-md font-general-medium bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-md px-5 py-2.5 duration-300"
-              aria-label="Hire Me Button">
-              Hire Me
+              aria-label="Contact Me Button">
+              Contact Me
             </button>
           </div>
 
@@ -171,8 +171,8 @@ function AppHeader() {
         </div>
       </div>
       <>
-        {showModal ? <HireMeModal onClose={showHireMeModal} onRequest={showHireMeModal} /> : null}
-        {showModal ? showHireMeModal : null}
+        {showModal ? <ContactMeModal onClose={showContactMeButton} onRequest={showContactMeButton} /> : null}
+        {showModal ? showContactMeButton : null}
       </>
     </motion.nav>
   )

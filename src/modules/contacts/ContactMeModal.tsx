@@ -9,7 +9,7 @@ type Props = {
   onRequest: () => void
 }
 
-function HireMeModal({ onClose, onRequest }: Props) {
+function ContactMeModal({ onClose, onRequest }: Props) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -124,4 +124,4 @@ function HireMeModal({ onClose, onRequest }: Props) {
   )
 }
 
-export default HireMeModal
+export default ContactMeModal
