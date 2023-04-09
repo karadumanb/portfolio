@@ -9,12 +9,13 @@ import PumaImage from '@/../public/images/brands/puma_gray.png';
 
 export const aboutMeData = [
 	{
-		id: 1,
-		bio: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
+		bio: 'As an experienced software developer, specialized in pixel perfect, scalable, secure and maintainable web applications as well as mobile applications. 6+ years industry experience specialized in JavaScript frameworks such as React and React Native using Typescript. Strong foundation in various programming languages and a focus on clean, efficient code.',
 	},
 	{
-		id: 2,
-		bio: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?',
+		bio: 'As a senior front-end developer, I have advanced front-end knowledge about React and its latest concepts. Developed scalable templates and starter kits with React Native using Expo. Used Angular 2+ for many years in the past.',
+	},
+	{
+		bio: 'As a junior-mid back-end developer, 3 years experience with Ruby on Rails managing complex big data using SQL.',
 	},
 ];
 
