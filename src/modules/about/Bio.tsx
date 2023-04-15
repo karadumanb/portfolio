@@ -18,7 +18,9 @@ function AboutMeBio() {
 
       <div className="font-general-regular w-full sm:w-3/4 text-left">
         {aboutMe.map((bio, index) => (
-          <p className="mb-4 text-ternary-dark dark:text-ternary-light text-lg" key={`bio-${index}`}>
+          <p
+            className="mb-4 text-ternary-dark dark:text-ternary-light text-lg"
+            key={`bio-${index}`}>
             {bio.bio}
           </p>
         ))}

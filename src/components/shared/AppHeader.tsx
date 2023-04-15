@@ -1,12 +1,12 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import ContactMeModal from '@/modules/contacts/ContactMeModal'
 import { motion } from 'framer-motion'
-import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
 import { FiMenu, FiMoon, FiSun, FiX } from 'react-icons/fi'
 import useThemeSwitcher from '../../hooks/useThemeSwitcher'
-import logoDark from '@/../public/images/logo-dark.svg'
-import logoLight from '@/../public/images/logo-light.svg'
+import Logo from './Logo'
 
 function AppHeader() {
   const [showMenu, setShowMenu] = useState(false)
@@ -41,27 +41,9 @@ function AppHeader() {
       <div className="z-10 max-w-screen-lg xl:max-w-screen-xl block sm:flex sm:justify-between sm:items-center py-6">
         {/* Header menu links and small screen hamburger menu */}
         <div className="flex justify-between items-center px-4 sm:px-0">
-          <div>
-            <Link href="/">
-              {activeTheme === 'dark' ? (
-                <Image
-                  src={logoDark}
-                  className="w-36 cursor-pointer"
-                  alt="Dark Logo"
-                  width={150}
-                  height={120}
-                />
-              ) : (
-                <Image
-                  src={logoLight}
-                  className="w-36 cursor-pointer"
-                  alt="Dark Logo"
-                  width={150}
-                  height={120}
-                />
-              )}
-            </Link>
-          </div>
+          <Link href="/">
+            <Logo />
+          </Link>
 
           {/* Theme switcher small screen */}
           <div
@@ -171,7 +153,9 @@ function AppHeader() {
         </div>
       </div>
       <>
-        {showModal ? <ContactMeModal onClose={showContactMeButton} onRequest={showContactMeButton} /> : null}
+        {showModal ? (
+          <ContactMeModal onClose={showContactMeButton} onRequest={showContactMeButton} />
+        ) : null}
         {showModal ? showContactMeButton : null}
       </>
     </motion.nav>

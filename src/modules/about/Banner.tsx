@@ -1,10 +1,11 @@
-/* eslint-disable @next/next/no-img-element */
 import { getImageUrl } from '@/services/image'
 import { motion } from 'framer-motion'
 import { FiArrowDownCircle } from 'react-icons/fi'
+import Typed from 'react-typed'
+
 import useThemeSwitcher from '../../hooks/useThemeSwitcher'
 
-function AppBanner() {
+function Banner() {
   const [activeTheme] = useThemeSwitcher()
 
   return (
@@ -23,7 +24,7 @@ function AppBanner() {
             delay: 0.1
           }}
           className="font-general-semibold text-2xl lg:text-3xl xl:text-4xl text-center sm:text-left text-ternary-dark dark:text-primary-light">
-          Hi, I am Baturay
+          <Typed strings={['Hi, I am Baturay']} typeSpeed={60} showCursor={false} />
         </motion.h1>
         <motion.p
           initial={{ opacity: 0 }}
@@ -34,7 +35,17 @@ function AppBanner() {
             delay: 0.2
           }}
           className="font-general-medium mt-4 text-lg md:text-xl lg:text-2xl xl:text-3xl text-center sm:text-left leading-normal text-gray-500 dark:text-gray-200">
-          A Full-Stack Developer & Design Enthusiast
+          <Typed
+            strings={[
+              'Senior Front-End Developer',
+              'Mid Back-End Developer',
+              'Mid Mobile Developer',
+              'Design Enthusiast'
+            ]}
+            typeSpeed={10}
+            backSpeed={20}
+            loop
+          />
         </motion.p>
         <motion.div
           initial={{ opacity: 0 }}
@@ -69,4 +80,4 @@ function AppBanner() {
   )
 }
 
-export default AppBanner
+export default Banner

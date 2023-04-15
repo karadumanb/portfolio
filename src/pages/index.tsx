@@ -2,7 +2,7 @@ import Link from 'next/link'
 import PagesMetaHead from '@/components/shared/PagesMetaHead'
 import ProjectsGrid from '@/modules/projects/Grid'
 import Button from '@/components/general/Button'
-import AppBanner from '@/components/shared/AppBanner'
+import AppBanner from '@/modules/about/Banner'
 
 export default function Home() {
   return (
