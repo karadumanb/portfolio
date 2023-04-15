@@ -3,8 +3,6 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 
-const imageStyle = { maxWidth: '100%', height: 'auto' }
-
 type Props = {
   project: Project
 }

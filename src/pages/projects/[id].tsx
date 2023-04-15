@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { FiClock, FiTag } from 'react-icons/fi'
 import PagesMetaHead from '@/components/shared/PagesMetaHead'
-import RelatedProjects from '@/modules/projects/RelatedProjects'
+import OtherProjects from '@/modules/projects/OtherProjects'
 import { projectsData } from '@/modules/projects/data'
 import { getImageUrl } from '@/services/image'
 
@@ -129,7 +129,7 @@ function ProjectSingle({ project }: Props) {
         </div>
       </div>
 
-      <RelatedProjects />
+      <OtherProjects project={project} />
     </div>
   )
 }

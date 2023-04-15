@@ -1,3 +1,4 @@
+/* eslint-disable max-lines */
 export const projectsData: Project[] = [
   {
     id: 1,
