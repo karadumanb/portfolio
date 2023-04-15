@@ -5,25 +5,30 @@ import ProjectsFilter from './Filter'
 import ProjectSingle from './Single'
 
 function ProjectsGrid() {
-  const [, setSearchProject] = useState<string>('')
-  const [selectProject, setSelectProject] = useState<string>('')
+  const [query, setQuery] = useState<string>('')
+  const [category, setCategory] = useState<string>('')
 
-  // @todo - To be fixed
-  // const searchProjectsByTitle = projectsData.filter((item) => {
-  // 	const result = item.title
-  // 		.toLowerCase()
-  // 		.includes(searchProject.toLowerCase())
-  // 		? item
-  // 		: searchProject == ''
-  // 		? item
-  // 		: '';
-  // 	return result;
-  // });
+  function filterByTitle(projects: Project[], search = '') {
+    if (!search) return projects
 
-  const selectProjectsByCategory = projectsData.filter((item) => {
-    const category = item.category.charAt(0).toUpperCase() + item.category.slice(1)
-    return category.includes(selectProject as string)
-  })
+    return projects.filter((item) => {
+      return item.title.toLowerCase().includes(search.toLowerCase())
+    })
+  }
+
+  function filterByCategory(projects: Project[], category = '') {
+    if (!category || category === 'All Projects') return projects
+
+    return projects.filter((item) => {
+      const projectCategory = item.category.charAt(0).toUpperCase() + item.category.slice(1)
+
+      return category.includes(projectCategory as string)
+    })
+  }
+
+  function getFilteredProjects() {
+    return filterByCategory(filterByTitle(projectsData, query), category)
+  }
 
   return (
     <section className="py-5 sm:py-10 mt-5 sm:mt-10">
@@ -44,7 +49,7 @@ function ProjectsGrid() {
             </span>
             <input
               onChange={(e) => {
-                setSearchProject(e.target.value)
+                setQuery(e.target.value)
               }}
               className="ont-general-medium pl-3 pr-1 sm:px-4 py-2 border border-gray-200 dark:border-secondary-dark rounded-lg text-sm sm:text-md bg-secondary-light dark:bg-ternary-dark text-primary-dark dark:text-ternary-light"
               id="name"
@@ -55,16 +60,14 @@ function ProjectsGrid() {
             />
           </div>
 
-          <ProjectsFilter onChange={setSelectProject} />
+          <ProjectsFilter onChange={setCategory} />
         </div>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6 sm:gap-5">
-        {selectProject
-          ? selectProjectsByCategory.map((project, index) => {
-              return <ProjectSingle key={index} project={project} />
-            })
-          : projectsData.map((project, index) => <ProjectSingle key={index} project={project} />)}
+        {getFilteredProjects().map((project, index) => {
+          return <ProjectSingle key={index} project={project} />
+        })}
       </div>
     </section>
   )

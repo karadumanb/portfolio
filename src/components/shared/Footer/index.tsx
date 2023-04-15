@@ -1,5 +1,5 @@
 import { FiGithub, FiTwitter, FiLinkedin, FiGlobe, FiYoutube } from 'react-icons/fi'
-import AppFooterCopyright from './AppFooterCopyright'
+import AppFooterCopyright from './Copyright'
 
 const socialLinks = [
   {

@@ -1,5 +1,5 @@
-import AppHeader from '../shared/AppHeader'
-import AppFooter from '../shared/AppFooter'
+import AppHeader from '../shared/Header'
+import AppFooter from '../shared/Footer'
 import PagesMetaHead from '../shared/PagesMetaHead'
 
 const DefaultLayout = ({ children }: React.PropsWithChildren) => {
