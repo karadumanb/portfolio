@@ -19,8 +19,6 @@ export const aboutMeData = [
   }
 ]
 
-export const clientsHeading = 'Some of the brands I worked with'
-
 export const clientsData = [
   {
     id: 1,
