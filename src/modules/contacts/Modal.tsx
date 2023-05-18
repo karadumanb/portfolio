@@ -15,7 +15,7 @@ function ContactMeModal({ onRequest, onClose, ...others }: Props) {
       )}
       headerRenderer={() => (
         <h5 className=" text-primary-dark dark:text-primary-light text-xl">
-          What project are you looking for?
+          {"Let's keep in touch!"}
         </h5>
       )}
       {...others}

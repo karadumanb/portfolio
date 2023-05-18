@@ -36,33 +36,35 @@ function AppHeader() {
             <Logo />
           </Link>
 
-          {/* Theme switcher small screen */}
-          <div
-            //@ts-ignore
-            onClick={() => setTheme(activeTheme)}
-            aria-label="Theme Switcher"
-            className="block sm:hidden ml-0 bg-primary-light dark:bg-ternary-dark p-3 shadow-sm rounded-xl cursor-pointer">
-            {activeTheme === 'dark' ? (
-              <FiMoon className="text-ternary-dark hover:text-gray-400 dark:text-ternary-light dark:hover:text-primary-light text-xl" />
-            ) : (
-              <FiSun className="text-gray-200 hover:text-gray-50 text-xl" />
-            )}
-          </div>
+          <div className="flex gap-3">
+            {/* Theme switcher small screen */}
+            <div
+              //@ts-ignore
+              onClick={() => setTheme(activeTheme)}
+              aria-label="Theme Switcher"
+              className="block sm:hidden ml-0 bg-primary-light dark:bg-ternary-dark p-3 shadow-sm rounded-xl cursor-pointer">
+              {activeTheme === 'dark' ? (
+                <FiMoon className="text-ternary-dark hover:text-gray-400 dark:text-ternary-light dark:hover:text-primary-light text-xl" />
+              ) : (
+                <FiSun className="text-gray-200 hover:text-gray-50 text-xl" />
+              )}
+            </div>
 
-          {/* Small screen hamburger menu */}
-          <div className="sm:hidden">
-            <button
-              onClick={toggleMenu}
-              type="button"
-              className="focus:outline-none"
-              aria-label="Hamburger Menu">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                className="h-7 w-7 fill-current text-secondary-dark dark:text-ternary-light">
-                {showMenu ? <FiX className="text-3xl" /> : <FiMenu className="text-3xl" />}
-              </svg>
-            </button>
+            {/* Small screen hamburger menu */}
+            <div className="sm:hidden flex">
+              <button
+                onClick={toggleMenu}
+                type="button"
+                className="focus:outline-none"
+                aria-label="Hamburger Menu">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  className="h-7 w-7 fill-current text-secondary-dark dark:text-ternary-light">
+                  {showMenu ? <FiX className="text-3xl" /> : <FiMenu className="text-3xl" />}
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
 
@@ -91,7 +93,7 @@ function AppHeader() {
           <div className="border-t-2 pt-3 sm:pt-0 sm:border-t-0 border-primary-light dark:border-secondary-dark">
             <button
               onClick={modalController.onOpen}
-              className="font-general-medium sm:hidden block text-left text-md bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-sm px-4 py-2 mt-2 duration-300 w-24"
+              className="font-general-medium sm:hidden block text-left text-md bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-sm px-4 py-2 mt-2 duration-300"
               aria-label="Contact Me Button">
               Contact Me
             </button>
