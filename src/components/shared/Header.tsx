@@ -1,16 +1,17 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import ContactMeModal from '@/modules/contacts/ContactMeModal'
+import ContactMeModal from '@/modules/contacts/Modal'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { useState } from 'react'
 import { FiMenu, FiMoon, FiSun, FiX } from 'react-icons/fi'
 import useThemeSwitcher from '../../hooks/useThemeSwitcher'
 import Logo from './Logo'
+import useModal from '@/hooks/useModal'
 
 function AppHeader() {
   const [showMenu, setShowMenu] = useState(false)
-  const [showModal, setShowModal] = useState(false)
+  const modalController = useModal()
   const [activeTheme, setTheme] = useThemeSwitcher()
 
   function toggleMenu() {
@@ -18,16 +19,6 @@ function AppHeader() {
       setShowMenu(true)
     } else {
       setShowMenu(false)
-    }
-  }
-
-  function showContactMeButton() {
-    if (!showModal) {
-      document.getElementsByTagName('html')[0].classList.add('overflow-y-hidden')
-      setShowModal(true)
-    } else {
-      document.getElementsByTagName('html')[0].classList.remove('overflow-y-hidden')
-      setShowModal(false)
     }
   }
 
@@ -99,7 +90,7 @@ function AppHeader() {
           </div>
           <div className="border-t-2 pt-3 sm:pt-0 sm:border-t-0 border-primary-light dark:border-secondary-dark">
             <button
-              onClick={showContactMeButton}
+              onClick={modalController.onOpen}
               className="font-general-medium sm:hidden block text-left text-md bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-sm px-4 py-2 mt-2 duration-300 w-24"
               aria-label="Contact Me Button">
               Contact Me
@@ -131,7 +122,7 @@ function AppHeader() {
         <div className="hidden sm:flex justify-between items-center flex-col md:flex-row">
           <div className="hidden md:flex">
             <button
-              onClick={showContactMeButton}
+              onClick={modalController.onOpen}
               className="text-md font-general-medium bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-md px-5 py-2.5 duration-300"
               aria-label="Contact Me Button">
               Contact Me
@@ -152,12 +143,7 @@ function AppHeader() {
           </div>
         </div>
       </div>
-      <>
-        {showModal ? (
-          <ContactMeModal onClose={showContactMeButton} onRequest={showContactMeButton} />
-        ) : null}
-        {showModal ? showContactMeButton : null}
-      </>
+      <ContactMeModal {...modalController} onRequest={modalController.onClose} />
     </motion.nav>
   )
 }

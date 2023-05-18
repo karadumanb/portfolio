@@ -1,8 +1,11 @@
-import { ButtonHTMLAttributes, DetailedHTMLProps } from 'react'
+import { ButtonHTMLAttributes, DetailedHTMLProps, ReactNode } from 'react'
 
 interface Props
-  extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
-  title: string
+  extends Omit<
+    DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>,
+    'title'
+  > {
+  title: ReactNode
 }
 
 function Button({ title, ...others }: Props) {

@@ -4,6 +4,9 @@ import ContactForm from '@/modules/contacts/Form'
 import PagesMetaHead from '@/components/shared/PagesMetaHead'
 
 function contact() {
+  function onRequest() {
+    console.log('to be implemented')
+  }
   return (
     <div>
       <PagesMetaHead title="Contact" />
@@ -17,7 +20,12 @@ function contact() {
           delay: 0.1
         }}
         className="container mx-auto flex flex-col-reverse lg:flex-row py-5 lg:py-10 lg:mt-5">
-        <ContactForm />
+        <div className="w-full lg:w-1/2">
+          <ContactForm
+            onRequest={onRequest}
+            className="max-w-xl m-4 p-6 sm:p-10 bg-secondary-light dark:bg-secondary-dark rounded-xl shadow-xl "
+          />
+        </div>
 
         <ContactDetails />
       </motion.div>
