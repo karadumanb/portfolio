@@ -20,10 +20,10 @@ function OtherProjects({ project }: { project: Project }) {
               <Link
                 key={item.id}
                 href="/projects/[id]"
-                as={'/projects/' + item.id}
+                as={'/projects/' + item.slug}
                 aria-label="Single Project">
                 <Image
-                  src={getImageUrl(item.img)}
+                  src={getImageUrl(item.img, 'projects')}
                   className="rounded-xl cursor-pointer"
                   width="400"
                   height="400"

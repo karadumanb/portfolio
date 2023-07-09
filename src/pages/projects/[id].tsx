@@ -1,8 +1,8 @@
+import { projectsData } from '@/modules/projects/data'
 import Image from 'next/image'
 import { FiClock, FiTag } from 'react-icons/fi'
 import PagesMetaHead from '@/components/shared/PagesMetaHead'
 import OtherProjects from '@/modules/projects/OtherProjects'
-import { projectsData } from '@/modules/projects/data'
 import { getImageUrl } from '@/services/image'
 
 type Props = {
@@ -10,6 +10,15 @@ type Props = {
 }
 
 function ProjectSingle({ project }: Props) {
+  function getLink(info: Company) {
+    if (info.title === 'Website') {
+      return info.details
+    }
+    if (info.title === 'Phone') {
+      return `tel:${info.details}`
+    }
+  }
+
   return (
     <div className="container mx-auto">
       <PagesMetaHead title={project.title} />
@@ -29,7 +38,7 @@ function ProjectSingle({ project }: Props) {
           <div className="flex items-center">
             <FiTag className="w-4 h-4 text-ternary-dark dark:text-ternary-light" />
             <span className="font-general-regular ml-2 leading-none text-primary-dark dark:text-primary-light">
-              {project.tags}
+              {project.category}
             </span>
           </div>
         </div>
@@ -41,7 +50,7 @@ function ProjectSingle({ project }: Props) {
           return (
             <div className="mb-10 sm:mb-0" key={image.id}>
               <Image
-                src={getImageUrl(image.img)}
+                src={getImageUrl(image.img, 'projects')}
                 className="rounded-xl cursor-pointer shadow-lg sm:shadow-none w-full h-auto"
                 alt={image.title}
                 key={image.id}
@@ -63,21 +72,27 @@ function ProjectSingle({ project }: Props) {
             </p>
             <ul className="leading-loose">
               {project.info.companyInfo.map((info) => {
+                const link = getLink(info)
+
                 return (
                   <li
                     className="font-general-regular text-ternary-dark dark:text-ternary-light"
                     key={info.id}>
                     <span>{info.title}: </span>
-                    <a
-                      href="https://baturaykaraduman.netlify.app"
-                      className={
-                        info.title === 'Website' || info.title === 'Phone'
-                          ? 'hover:underline hover:text-indigo-500 dark:hover:text-indigo-400 cursor-pointer duration-300'
-                          : ''
-                      }
-                      aria-label="Project Website and Phone">
-                      {info.details}
-                    </a>
+                    {link ? (
+                      <a
+                        href={link}
+                        target="_blank"
+                        className={
+                          'hover:underline hover:text-indigo-500 dark:hover:text-indigo-400 cursor-pointer duration-300'
+                        }
+                        aria-label="Project Website and Phone"
+                        rel="noreferrer">
+                        {info.details}
+                      </a>
+                    ) : (
+                      <span aria-label="Project Information">{info.details}</span>
+                    )}
                   </li>
                 )
               })}
@@ -103,13 +118,6 @@ function ProjectSingle({ project }: Props) {
               {project.info.technologies[0].techs.join(', ')}
             </p>
           </div>
-
-          {/* Single project social sharing */}
-          <div>
-            <p className="font-general-regular text-2xl font-semibold text-ternary-dark dark:text-ternary-light mb-2">
-              {'Share this'}
-            </p>
-          </div>
         </div>
 
         {/*  Single project right section details */}
@@ -133,12 +141,13 @@ function ProjectSingle({ project }: Props) {
     </div>
   )
 }
-
 export async function getServerSideProps({ query }: { query: { id: string } }) {
   const { id } = query
   return {
     props: {
-      project: projectsData.filter((project) => project.id === parseInt(id))[0]
+      project:
+        projectsData.find((project) => project.id === parseInt(id)) ||
+        projectsData.find((project) => project.slug === id)
     }
   }
 }

@@ -34,8 +34,8 @@ const Modal = ({
 
       {/* Modal Content */}
       <main className="flex flex-col items-center justify-center h-full w-full">
-        <div className="modal-wrapper flex items-center z-30 w-full md:w-auto">
-          <div className="modal min-w-full max-w-md w-full md:w-auto md:mx-5 xl:max-w-xl lg:max-w-xl md:max-w-xl bg-secondary-light dark:bg-primary-dark max-h-screen shadow-lg flex-row rounded-lg relative">
+        <div className="modal-wrapper flex items-center z-30 w-full max-w-md lg:max-w-xl md:max-w-xl">
+          <div className="modal min-w-full w-full md:w-auto md:mx-5 xl:max-w-xl bg-secondary-light dark:bg-primary-dark max-h-screen shadow-lg flex-row rounded-lg relative">
             <div className="modal-header flex justify-between gap-10 p-5 border-b border-ternary-light dark:border-ternary-dark">
               {headerRenderer?.()}
               <Button

@@ -2,10 +2,9 @@ declare interface Project {
   id: number
   title: string
   img: string
-  url: string
+  slug: string
   category: string
   publishDate: string
-  tags: string
   images: ProjectImage[]
   info: ProjectInfo
 }

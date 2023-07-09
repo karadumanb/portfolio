@@ -1,4 +1,6 @@
-const selectOptions = ['Web Application', 'Mobile Application', 'UI/UX Design', 'Branding']
+import { Category } from './data'
+
+const selectOptions = Object.values(Category)
 
 type Props = {
   onChange: (value: string) => void

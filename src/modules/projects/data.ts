@@ -1,61 +1,81 @@
 /* eslint-disable max-lines */
+export enum Category {
+  frontend = 'UI / Frontend',
+  fullStack = 'Full Stack'
+}
+
 export const projectsData: Project[] = [
   {
     id: 1,
-    title: 'Google Health Platform',
-    url: 'google-health-platform',
-    category: 'Web Application',
-    img: 'web-project-2.jpg',
-    publishDate: 'Jul 26, 2021',
-    tags: 'UI / Frontend',
+    title: 'Klarx GmbH',
+    slug: 'klarx-gmbh',
+    category: Category.fullStack,
+    img: 'klarx_1.png',
+    publishDate: '2018-2023',
     images: [
       {
         id: 1,
-        title: 'Google Health Platform',
-        img: 'ui-project-1.jpg'
+        title: 'Klarx Main Photo',
+        img: 'klarx_1.png'
       },
       {
         id: 2,
-        title: 'Google Health Platform',
-        img: 'web-project-2.jpg'
+        title: 'Klarx App',
+        img: 'klarx_2.png'
       },
       {
         id: 3,
-        title: 'Google Health Platform',
-        img: 'mobile-project-2.jpg'
+        title: 'Klarx Web',
+        img: 'klarx_3.png'
       }
     ],
     info: {
-      client: 'About Client',
+      client: 'About Company',
       companyInfo: [
         {
           id: 1,
           title: 'Name',
-          details: 'Company Ltd'
+          details: 'klarx GmbH'
         },
         {
           id: 2,
           title: 'Services',
-          details: 'Web Development'
+          details: 'Web & Mobile Development'
         },
         {
           id: 3,
           title: 'Website',
-          details: 'https://company.com'
+          details: 'https://klarx.de'
         },
         {
           id: 4,
-          title: 'Phone',
-          details: '555 8888 888'
+          title: 'Location',
+          details: 'Munich'
         }
       ],
       title: 'Objective',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, natus! Quibusdam enim quod in esse, mollitia molestias incidunt quas ipsa accusamus veniam.',
+        'klarx is a Munich based start-up operating Germanys largest online platform for construction equipment and heavy machinery rental. As an independent full-service provider, klarx digitalizes the entire rental process for rental stations and lessees.',
       technologies: [
         {
           title: 'Tools & Technologies',
-          techs: ['HTML', 'CSS', 'JavaScript', 'Vue.js', 'TailwindCSS', 'AdobeXD']
+          techs: [
+            'React',
+            'React Native',
+            'Ruby on Rails',
+            'Capacitor',
+            'Capistrano',
+            'Graphql',
+            'REST',
+            'HTML',
+            'CSS',
+            'SCSS',
+            'LESS',
+            'Typescript',
+            'Heroku',
+            'Digitalocean',
+            'Github'
+          ]
         }
       ],
       detailTitle: 'Challenge',
@@ -63,58 +83,60 @@ export const projectsData: Project[] = [
         {
           id: 1,
           details:
-            'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.'
+            'Delivered and managed customer and supplier facing projects with a design system using React components, collaborating with stakeholders to develop a set of fully accessible reusable UI elements that could be implemented across multiple applications, which allowed greater consistency and efficiency in the design and development process, ultimately improving the user experience.'
         },
         {
           id: 2,
           details:
-            'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?'
+            'Introduced micro-frontends architecture extracting parts of the legacy monolith frontend into their own React applications and created a component library to support the applications with common components and services.'
         },
         {
           id: 3,
-          details:
-            'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?'
+          details: 'Reduced 95% of the bugs which were occurring in a month.'
         },
         {
           id: 4,
+          details: 'Pushed strongly typed, modularised architecture with test coverage of over 80%.'
+        },
+        {
+          id: 5,
           details:
-            'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.'
+            'Managed big data with Ruby on Rails using Postgresql. Made applications handle over millions of rentals and machines within seconds.'
         }
       ]
     }
   },
   {
     id: 2,
-    title: 'Phoenix Digital Agency',
-    url: 'phoenix-digital-agency',
-    category: 'Mobile Application',
-    img: 'mobile-project-2.jpg',
+    title: 'Ovidos Creative',
+    slug: 'ovidos-creative',
+    category: Category.frontend,
+    img: 'ovidos_1.png',
     publishDate: 'Jul 26, 2021',
-    tags: 'Mobile Application',
     images: [
       {
         id: 1,
-        title: 'Phoenix Digital Agency',
-        img: 'ui-project-1.jpg'
+        title: 'Ovidos Creative',
+        img: 'ovidos_1.png'
       },
       {
         id: 2,
-        title: 'Phoenix Digital Agency',
+        title: 'Ovidos Creative',
         img: 'web-project-2.jpg'
       },
       {
         id: 3,
-        title: 'Phoenix Digital Agency',
+        title: 'Ovidos Creative',
         img: 'mobile-project-2.jpg'
       }
     ],
     info: {
-      client: 'About Client',
+      client: 'About Company',
       companyInfo: [
         {
           id: 1,
           title: 'Name',
-          details: 'Company Ltd'
+          details: 'Ovidos Creative'
         },
         {
           id: 2,
@@ -124,21 +146,34 @@ export const projectsData: Project[] = [
         {
           id: 3,
           title: 'Website',
-          details: 'https://company.com'
+          details: 'http://ovidos.com/'
         },
         {
           id: 4,
-          title: 'Phone',
-          details: '555 8888 888'
+          title: 'Location',
+          details: 'Istanbul'
         }
       ],
       title: 'Objective',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, natus! Quibusdam enim quod in esse, mollitia molestias incidunt quas ipsa accusamus veniam.',
+        'Ovidos Creative is a Istanbul based software agency that serves to multiple clients. Multiple full stack applications and its maintenance are built and deployed for big clients within Turkey.',
       technologies: [
         {
           title: 'Tools & Technologies',
-          techs: ['HTML', 'CSS', 'JavaScript', 'Vue.js', 'TailwindCSS', 'AdobeXD']
+          techs: [
+            'Angular',
+            'React',
+            'Angular',
+            'HTML',
+            'CSS',
+            'SCSS',
+            'Typescript',
+            'TailwindCSS',
+            'Material UI',
+            'Github',
+            '.NET',
+            'REST'
+          ]
         }
       ],
       detailTitle: 'Challenge',
@@ -146,22 +181,16 @@ export const projectsData: Project[] = [
         {
           id: 1,
           details:
-            'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.'
+            'Coded the new platforms for patients and doctors to communicate live with a professional UI in Angular 4+ which got almost 100% positive feedback from thousands of users who are using the platform.'
         },
         {
           id: 2,
           details:
-            'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?'
+            'Ownership of complex web applications with Angular 5+ with SSR to be SEO friendly.'
         },
         {
           id: 3,
-          details:
-            'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?'
-        },
-        {
-          id: 4,
-          details:
-            'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.'
+          details: 'Further self-development with React and REST API.'
         }
       ]
     }
@@ -169,11 +198,10 @@ export const projectsData: Project[] = [
   {
     id: 3,
     title: 'Project Management UI',
-    url: 'project-management-ui',
+    slug: 'project-management-ui',
     category: 'UI/UX Design',
     img: 'ui-project-1.jpg',
     publishDate: 'Jul 26, 2021',
-    tags: 'UI / Frontend',
     images: [
       {
         id: 999,
@@ -252,11 +280,10 @@ export const projectsData: Project[] = [
   {
     id: 4,
     title: 'Cloud Storage Platform',
-    url: 'cloud-storage-platform',
+    slug: 'cloud-storage-platform',
     category: 'UI/UX Design',
     img: 'ui-project-2.jpg',
     publishDate: 'Jul 26, 2021',
-    tags: 'Web & Cloud',
     images: [
       {
         id: 999,
@@ -335,11 +362,10 @@ export const projectsData: Project[] = [
   {
     id: 5,
     title: 'WeTalk Social Application',
-    url: 'wetalk-social-app',
+    slug: 'wetalk-social-app',
     category: 'Mobile Application',
     img: 'mobile-project-1.jpg',
     publishDate: 'Jul 26, 2021',
-    tags: 'UI / Frontend',
     images: [
       {
         id: 999,
@@ -418,11 +444,10 @@ export const projectsData: Project[] = [
   {
     id: 6,
     title: 'Apple New Design System',
-    url: 'apple-new-design-system',
+    slug: 'apple-new-design-system',
     category: 'Web Application',
     img: 'web-project-1.jpg',
     publishDate: 'Jul 26, 2021',
-    tags: 'UI / Frontend',
     images: [
       {
         id: 999,
