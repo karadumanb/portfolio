@@ -1,7 +1,8 @@
 /* eslint-disable max-lines */
 export enum Category {
   frontend = 'UI / Frontend',
-  fullStack = 'Full Stack'
+  fullStack = 'Full Stack',
+  mobile = 'Mobile (React Native)'
 }
 
 export const projectsData: Project[] = [
@@ -10,7 +11,7 @@ export const projectsData: Project[] = [
     title: 'Klarx GmbH',
     slug: 'klarx-gmbh',
     category: Category.fullStack,
-    img: 'klarx_1.png',
+    img: 'klarx.jpg',
     publishDate: '2018-2023',
     images: [
       {
@@ -112,7 +113,7 @@ export const projectsData: Project[] = [
     slug: 'ovidos-creative',
     category: Category.frontend,
     img: 'ovidos_1.png',
-    publishDate: 'Jul 26, 2021',
+    publishDate: '2017-2018',
     images: [
       {
         id: 1,
@@ -197,107 +198,108 @@ export const projectsData: Project[] = [
   },
   {
     id: 3,
-    title: 'Project Management UI',
-    slug: 'project-management-ui',
-    category: 'UI/UX Design',
-    img: 'ui-project-1.jpg',
-    publishDate: 'Jul 26, 2021',
+    title: 'KolektifLabs',
+    slug: 'kolektif-labs',
+    category: Category.frontend,
+    img: 'kolektif_labs_1.png',
+    publishDate: 'January-August, 2017',
     images: [
       {
-        id: 999,
-        title: 'Kabul Project Management UI',
-        img: 'ui-project-1.jpg'
+        id: 1,
+        title: 'Kolektiflabs Project',
+        img: 'kolektif_labs_1.png'
       },
       {
-        id: 999,
-        title: 'Kabul Project Management UI',
-        img: 'web-project-2.jpg'
+        id: 2,
+        title: 'Kolektiflabs Project',
+        img: 'kolektif_labs_2.jpg'
       },
       {
-        id: 999,
-        title: 'Kabul Project Management UI',
+        id: 3,
+        title: 'Kolektiflabs Project',
         img: 'mobile-project-2.jpg'
       }
     ],
     info: {
-      client: 'About Client',
+      client: 'About Company',
       companyInfo: [
         {
-          id: 999,
+          id: 1,
           title: 'Name',
-          details: 'Company Ltd'
+          details: 'Kolektiflabs ltd'
         },
         {
-          id: 999,
+          id: 2,
           title: 'Services',
-          details: 'UI Design & Frontend Development'
+          details: 'Software Agency (Fullstack)'
         },
         {
-          id: 999,
+          id: 3,
           title: 'Website',
-          details: 'https://company.com'
+          details: 'https://kolektiflabs.com'
         },
         {
-          id: 999,
-          title: 'Phone',
-          details: '555 8888 888'
+          id: 4,
+          title: 'Location',
+          details: 'San Francisco CA. & Istanbul'
         }
       ],
       title: 'Objective',
-      description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, natus! Quibusdam enim quod in esse, mollitia molestias incidunt quas ipsa accusamus veniam.',
+      description: 'Software agency that acquires multiple hand on project and gives support.',
       technologies: [
         {
           title: 'Tools & Technologies',
-          techs: ['HTML', 'CSS', 'JavaScript', 'Vue.js', 'TailwindCSS', 'AdobeXD']
+          techs: [
+            'HTML',
+            'CSS',
+            'JavaScript',
+            'Angular 2+',
+            'TailwindCSS',
+            'Bootstrap',
+            'WordPress'
+          ]
         }
       ],
       detailTitle: 'Challenge',
       details: [
         {
-          id: 999,
+          id: 1,
           details:
-            'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.'
+            'Helped seniors to build websites to buy movie theater tickets and view movie details using Angular 2+.'
         },
         {
-          id: 999,
+          id: 2,
           details:
-            'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?'
+            'Worked with multiple platforms using most popular ui libraries such as Bootstrap.'
         },
         {
-          id: 999,
-          details:
-            'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?'
-        },
-        {
-          id: 999,
-          details:
-            'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.'
+          id: 3,
+          details: 'Worked with wordpress for tech support.'
         }
       ]
     }
   },
   {
     id: 4,
-    title: 'Cloud Storage Platform',
-    slug: 'cloud-storage-platform',
-    category: 'UI/UX Design',
-    img: 'ui-project-2.jpg',
-    publishDate: 'Jul 26, 2021',
+    title: 'Analizoom',
+    slug: 'analizoom',
+    category: Category.mobile,
+    img: 'analizoom_1.jpg',
+    publishDate: 'Feb - August,2022',
     images: [
       {
-        id: 999,
-        title: 'Kabul Cloud Storage Platform',
-        img: 'ui-project-1.jpg'
+        id: 1,
+        title: 'Analizoom Project',
+        img: 'analizoom_1.jpg'
       },
       {
-        id: 999,
-        title: 'Kabul Cloud Storage Platform',
-        img: 'web-project-2.jpg'
+        id: 2,
+        title: 'Analizoom Project',
+        img: 'analizoom_2.jpg'
       },
       {
-        id: 999,
-        title: 'Kabul Cloud Storage Platform',
+        id: 3,
+        title: 'Analizoom Project',
         img: 'mobile-project-2.jpg'
       }
     ],
@@ -305,81 +307,73 @@ export const projectsData: Project[] = [
       client: 'About Client',
       companyInfo: [
         {
-          id: 999,
+          id: 1,
           title: 'Name',
-          details: 'Company Ltd'
+          details: 'Analizoom Ltd'
         },
         {
-          id: 999,
+          id: 2,
           title: 'Services',
-          details: 'UI Design & Frontend Development'
+          details: 'Stock market consultant'
         },
         {
-          id: 999,
-          title: 'Website',
-          details: 'https://company.com'
-        },
-        {
-          id: 999,
-          title: 'Phone',
-          details: '555 8888 888'
+          id: 4,
+          title: 'Work Type',
+          details: 'Remote & Freelance'
         }
       ],
       title: 'Objective',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, natus! Quibusdam enim quod in esse, mollitia molestias incidunt quas ipsa accusamus veniam.',
+        'Social media platform that helps people to get consultancy about hottest stocks in the market',
       technologies: [
         {
           title: 'Tools & Technologies',
-          techs: ['HTML', 'CSS', 'JavaScript', 'Vue.js', 'TailwindCSS', 'AdobeXD']
+          techs: [
+            'React Native',
+            'Typescript',
+            'Jest',
+            'Web Socket',
+            'Google Ad Mob',
+            'IOS',
+            'Android'
+          ]
         }
       ],
       detailTitle: 'Challenge',
       details: [
         {
-          id: 999,
+          id: 1,
           details:
-            'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.'
+            'Implemented a social media platform that connects stock investors in one platform.'
         },
         {
-          id: 999,
-          details:
-            'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?'
-        },
-        {
-          id: 999,
-          details:
-            'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?'
-        },
-        {
-          id: 999,
-          details:
-            'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.'
+          id: 2,
+          details: 'Special requirements with IOS and Android have been overcome'
         }
       ]
     }
   },
   {
     id: 5,
-    title: 'WeTalk Social Application',
-    slug: 'wetalk-social-app',
-    category: 'Mobile Application',
+    title: 'HEEVI',
+    slug: 'heevi',
+    category: Category.mobile,
     img: 'mobile-project-1.jpg',
     publishDate: 'Jul 26, 2021',
     images: [
       {
         id: 999,
-        title: 'WeTalk Social Application',
+        title: 'HEEVI',
         img: 'ui-project-1.jpg'
       },
       {
         id: 999,
-        title: 'WeTalk Social Application',
+        title: 'HEEVI',
         img: 'web-project-2.jpg'
       },
       {
         id: 999,
-        title: 'WeTalk Social Application',
+        title: 'HEEVI',
         img: 'mobile-project-2.jpg'
       }
     ],
@@ -443,25 +437,25 @@ export const projectsData: Project[] = [
   },
   {
     id: 6,
-    title: 'Apple New Design System',
-    slug: 'apple-new-design-system',
-    category: 'Web Application',
+    title: 'Starter Kit (Native Base)',
+    slug: 'native-base-starter-kit',
+    category: Category.mobile,
     img: 'web-project-1.jpg',
     publishDate: 'Jul 26, 2021',
     images: [
       {
         id: 999,
-        title: 'Kabul Apple New Design System',
+        title: 'Starter Kit (Native Base)',
         img: 'ui-project-1.jpg'
       },
       {
         id: 999,
-        title: 'Kabul Apple New Design System',
+        title: 'Starter Kit (Native Base)',
         img: 'web-project-2.jpg'
       },
       {
         id: 999,
-        title: 'Kabul Apple New Design System',
+        title: 'Starter Kit (Native Base)',
         img: 'mobile-project-2.jpg'
       }
     ],

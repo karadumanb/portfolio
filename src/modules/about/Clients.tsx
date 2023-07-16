@@ -1,4 +1,5 @@
-import { clientsData } from './data'
+import { getImageUrl } from '@/services/image'
+import { projectsData } from '../projects/data'
 import ClientItem from './ClientItem'
 
 function AboutClients() {
@@ -7,9 +8,13 @@ function AboutClients() {
       <p className="font-general-medium text-2xl sm:text-3xl  text-center text-primary-dark dark:text-primary-light">
         {'Some of the brands I worked with'}
       </p>
-      <div className="grid grid-cols-2 sm:grid-cols-4 mt-10 sm:mt-14 gap-2">
-        {clientsData.map((client) => (
-          <ClientItem title={client.title} image={client.img} key={client.id} />
+      <div className="grid grid-cols-2 sm:grid-cols-6 mt-10 sm:mt-14 gap-2">
+        {projectsData.map((project) => (
+          <ClientItem
+            title={project.title}
+            image={getImageUrl(project.img, 'projects')}
+            key={project.id}
+          />
         ))}
       </div>
     </div>
