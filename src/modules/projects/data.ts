@@ -15,17 +15,17 @@ export const projectsData: Project[] = [
     publishDate: '2018-2023',
     images: [
       {
-        id: 1,
+        id: 21,
         title: 'Klarx Main Photo',
         img: 'klarx_1.png'
       },
       {
-        id: 2,
+        id: 22,
         title: 'Klarx App',
         img: 'klarx_2.png'
       },
       {
-        id: 3,
+        id: 23,
         title: 'Klarx Web',
         img: 'klarx_3.png'
       }
@@ -205,17 +205,17 @@ export const projectsData: Project[] = [
     publishDate: 'January-August, 2017',
     images: [
       {
-        id: 1,
+        id: 31,
         title: 'Kolektiflabs Project',
         img: 'kolektif_labs_1.png'
       },
       {
-        id: 2,
+        id: 32,
         title: 'Kolektiflabs Project',
         img: 'kolektif_labs_2.jpg'
       },
       {
-        id: 3,
+        id: 33,
         title: 'Kolektiflabs Project',
         img: 'mobile-project-2.jpg'
       }
@@ -288,19 +288,19 @@ export const projectsData: Project[] = [
     publishDate: 'Feb - August,2022',
     images: [
       {
-        id: 1,
+        id: 41,
         title: 'Analizoom Project',
         img: 'analizoom_1.jpg'
       },
       {
-        id: 2,
+        id: 42,
         title: 'Analizoom Project',
         img: 'analizoom_2.jpg'
       },
       {
-        id: 3,
+        id: 43,
         title: 'Analizoom Project',
-        img: 'mobile-project-2.jpg'
+        img: 'analizoom_3.jpg'
       }
     ],
     info: {
@@ -348,32 +348,32 @@ export const projectsData: Project[] = [
         },
         {
           id: 2,
-          details: 'Special requirements with IOS and Android have been overcome'
+          details: 'Special requirements with IOS and Android have been successfully handled.'
         }
       ]
     }
   },
   {
     id: 5,
-    title: 'HEEVI',
-    slug: 'heevi',
+    title: 'Rental Machines',
+    slug: 'rental-machines',
     category: Category.mobile,
-    img: 'mobile-project-1.jpg',
-    publishDate: 'Jul 26, 2021',
+    img: 'rental_machines_1.jpg',
+    publishDate: 'Jul - Sep, 2022',
     images: [
       {
-        id: 999,
-        title: 'HEEVI',
-        img: 'ui-project-1.jpg'
+        id: 51,
+        title: 'Rental Machines',
+        img: 'rental_machines_1.jpg'
       },
       {
-        id: 999,
-        title: 'HEEVI',
-        img: 'web-project-2.jpg'
+        id: 52,
+        title: 'Rental Machines',
+        img: 'rental_machines_2.png'
       },
       {
-        id: 999,
-        title: 'HEEVI',
+        id: 53,
+        title: 'Rental Machines',
         img: 'mobile-project-2.jpg'
       }
     ],
@@ -381,54 +381,44 @@ export const projectsData: Project[] = [
       client: 'About Client',
       companyInfo: [
         {
-          id: 999,
-          title: 'Name',
-          details: 'Company Ltd'
-        },
-        {
-          id: 999,
+          id: 2,
           title: 'Services',
-          details: 'UI Design & Frontend Development'
+          details: 'Quick Machine Rentals'
         },
         {
-          id: 999,
-          title: 'Website',
-          details: 'https://company.com'
-        },
-        {
-          id: 999,
-          title: 'Phone',
-          details: '555 8888 888'
+          id: 4,
+          title: 'Work Type',
+          details: 'Remote & Freelance'
         }
       ],
       title: 'Objective',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, natus! Quibusdam enim quod in esse, mollitia molestias incidunt quas ipsa accusamus veniam.',
+        'The company provides a mobile platform which enables users to rent their equipments for their construction projects as quick as possible.',
       technologies: [
         {
           title: 'Tools & Technologies',
-          techs: ['HTML', 'CSS', 'JavaScript', 'Vue.js', 'TailwindCSS', 'AdobeXD']
+          techs: ['React Native', 'JavaScript', '#NET']
         }
       ],
       detailTitle: 'Challenge',
       details: [
         {
-          id: 999,
+          id: 1,
           details:
             'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.'
         },
         {
-          id: 999,
+          id: 2,
           details:
             'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?'
         },
         {
-          id: 999,
+          id: 3,
           details:
             'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?'
         },
         {
-          id: 999,
+          id: 4,
           details:
             'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.'
         }
@@ -440,79 +430,95 @@ export const projectsData: Project[] = [
     title: 'Starter Kit (Native Base)',
     slug: 'native-base-starter-kit',
     category: Category.mobile,
-    img: 'web-project-1.jpg',
-    publishDate: 'Jul 26, 2021',
+    img: 'starter_kit_1.png',
+    publishDate: '2021-2022',
     images: [
       {
-        id: 999,
+        id: 61,
         title: 'Starter Kit (Native Base)',
-        img: 'ui-project-1.jpg'
+        img: 'starter_kit_1.png'
       },
       {
-        id: 999,
+        id: 62,
         title: 'Starter Kit (Native Base)',
-        img: 'web-project-2.jpg'
+        img: 'starter_kit_2.png'
       },
       {
-        id: 999,
+        id: 63,
         title: 'Starter Kit (Native Base)',
-        img: 'mobile-project-2.jpg'
+        img: 'starter_kit_3.png'
+      },
+      {
+        id: 64,
+        title: 'Starter Kit (Native Base)',
+        img: 'starter_kit_4.png'
+      },
+      {
+        id: 65,
+        title: 'Starter Kit (Native Base)',
+        img: 'starter_kit_5.png'
+      },
+      {
+        id: 66,
+        title: 'Starter Kit (Native Base)',
+        img: 'starter_kit_6.png'
       }
     ],
     info: {
-      client: 'About Client',
+      client: 'About The Project',
       companyInfo: [
         {
-          id: 999,
-          title: 'Name',
-          details: 'Company Ltd'
+          id: 1,
+          title: 'Work Type',
+          details: 'Personal Project'
         },
         {
-          id: 999,
+          id: 2,
           title: 'Services',
-          details: 'UI Design & Frontend Development'
+          details: 'UI Design & Mobile Development'
         },
         {
-          id: 999,
-          title: 'Website',
-          details: 'https://company.com'
-        },
-        {
-          id: 999,
+          id: 3,
           title: 'Phone',
-          details: '555 8888 888'
+          details: '+491782944572'
         }
       ],
       title: 'Objective',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, natus! Quibusdam enim quod in esse, mollitia molestias incidunt quas ipsa accusamus veniam.',
+        'As a personal project, I created a scalable and adjustable starter kit for all kinds of needs for a banking app where you can manage your transfers, cards, payments.',
       technologies: [
         {
           title: 'Tools & Technologies',
-          techs: ['HTML', 'CSS', 'JavaScript', 'Vue.js', 'TailwindCSS', 'AdobeXD']
+          techs: [
+            'React Native',
+            'Sketch',
+            'Typescript',
+            'React',
+            'Native Base',
+            'Express.js',
+            'Node.js'
+          ]
         }
       ],
       detailTitle: 'Challenge',
       details: [
         {
-          id: 999,
-          details:
-            'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.'
+          id: 1,
+          details: 'Created a design for a wallet mobile application from scratch using sketch.'
         },
         {
-          id: 999,
+          id: 2,
           details:
-            'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?'
+            'JSON server api with express.js to perform CRUD actions with adjustable base path and attributes.'
         },
         {
-          id: 999,
+          id: 3,
           details:
-            'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?'
+            'Implemented a scalable react & react native mobile application that is ready to be published or continued.'
         },
         {
-          id: 999,
-          details:
-            'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.'
+          id: 4,
+          details: 'Created reusable ui elements for the needs.'
         }
       ]
     }

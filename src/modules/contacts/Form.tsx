@@ -1,21 +1,38 @@
 import Button from '@/components/general/Button'
 import FormInput from '@/components/general/FormInput'
+import { sendEmail } from '@/services/email'
+import { FormEvent } from 'react'
 
 interface Props {
-  onRequest: () => void
+  onSuccess?: () => void
   className?: string
   onCancel?: () => void
   showTitle?: boolean
 }
 
-function ContactForm({ onRequest, className, onCancel, showTitle = true }: Props) {
+function ContactForm({ onSuccess, className, onCancel, showTitle = true }: Props) {
+  function submitForm(e: FormEvent<HTMLFormElement>) {
+    try {
+      e.preventDefault()
+      const form = e.target
+      // @ts-ignore
+      const formFields = form.elements
+
+      sendEmail({
+        from: formFields.email.value,
+        name: formFields.name.value,
+        subject: formFields.subject.value,
+        message: formFields.message.value
+      })
+
+      onSuccess?.()
+    } catch (err) {
+      console.error(err)
+    }
+  }
+
   return (
-    <form
-      onSubmit={(e) => {
-        e.preventDefault()
-        onRequest()
-      }}
-      className={`text-left ${className}`}>
+    <form onSubmit={submitForm} className={`text-left ${className}`}>
       {showTitle && (
         <p className="font-general-medium text-primary-dark dark:text-primary-light text-2xl mb-8">
           Contact Form
