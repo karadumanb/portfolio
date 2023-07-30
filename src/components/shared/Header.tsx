@@ -145,7 +145,7 @@ function AppHeader() {
           </div>
         </div>
       </div>
-      <ContactMeModal {...modalController} onRequest={modalController.onClose} />
+      <ContactMeModal {...modalController} onSuccess={modalController.onClose} />
     </motion.nav>
   )
 }

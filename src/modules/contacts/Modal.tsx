@@ -3,15 +3,15 @@ import { ComponentProps } from 'react'
 import ContactForm from './Form'
 
 interface Props extends ComponentProps<typeof Modal> {
-  onRequest: () => void
+  onSuccess: () => void
 }
 
-function ContactMeModal({ onRequest, onClose, ...others }: Props) {
+function ContactMeModal({ onSuccess, onClose, ...others }: Props) {
   return (
     <Modal
       onClose={onClose}
       bodyRenderer={() => (
-        <ContactForm showTitle={false} onRequest={onRequest} onCancel={onClose} />
+        <ContactForm showTitle={false} onSuccess={onSuccess} onCancel={onClose} />
       )}
       headerRenderer={() => (
         <h5 className=" text-primary-dark dark:text-primary-light text-xl">
