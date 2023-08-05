@@ -7,6 +7,7 @@ declare interface Project {
   publishDate: string
   images: ProjectImage[]
   info: ProjectInfo
+  selfProject?: boolean
 }
 
 declare interface ProjectImage {

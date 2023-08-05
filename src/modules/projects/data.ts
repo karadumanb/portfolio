@@ -421,6 +421,7 @@ export const projectsData: Project[] = [
     category: Category.mobile,
     img: 'starter_kit_1.png',
     publishDate: '2021-2022',
+    selfProject: true,
     images: [
       {
         id: 61,

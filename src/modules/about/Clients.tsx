@@ -9,13 +9,15 @@ function AboutClients() {
         {'Some of the brands I worked with'}
       </p>
       <div className="grid grid-cols-2 sm:grid-cols-6 mt-10 sm:mt-14 gap-2">
-        {projectsData.map((project) => (
-          <ClientItem
-            title={project.title}
-            image={getImageUrl(project.img, 'projects')}
-            key={project.id}
-          />
-        ))}
+        {projectsData
+          .filter((p) => !p.selfProject)
+          .map((project) => (
+            <ClientItem
+              title={project.title}
+              image={getImageUrl(project.img, 'projects')}
+              key={project.id}
+            />
+          ))}
       </div>
     </div>
   )
