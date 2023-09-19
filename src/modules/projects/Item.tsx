@@ -7,7 +7,7 @@ type Props = {
   project: Project
 }
 
-const ProjectSingle = ({ project }: Props) => {
+const ProjectItem = ({ project }: Props) => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -44,4 +44,4 @@ const ProjectSingle = ({ project }: Props) => {
   )
 }
 
-export default ProjectSingle
+export default ProjectItem

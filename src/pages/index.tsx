@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import PagesMetaHead from '@/components/shared/PagesMetaHead'
-import ProjectsGrid from '@/modules/projects/Grid'
+import ProjectList from '@/modules/projects/List'
 import Button from '@/components/general/Button'
 import AppBanner from '@/modules/about/Banner'
 
@@ -9,7 +9,7 @@ export default function Home() {
     <div className="container mx-auto">
       <PagesMetaHead title="Home" />
       <AppBanner />
-      <ProjectsGrid />
+      <ProjectList />
       <div className="mt-10 sm:mt-15 flex justify-center">
         <div className="font-general-medium flex items-center px-6 py-3 rounded-lg shadow-lg hover:shadow-xl bg-indigo-500 hover:bg-indigo-600 focus:ring-1 focus:ring-indigo-900 text-white text-lg sm:text-xl duration-300">
           <Link href="/projects" aria-label="More Projects" passHref>

@@ -1,11 +1,11 @@
 import PagesMetaHead from '@/components/shared/PagesMetaHead'
-import ProjectList from '@/modules/projects/List'
+import BlogList from '@/modules/blog/List'
 import { motion } from 'framer-motion'
 
-function index() {
+function blog() {
   return (
     <div>
-      <PagesMetaHead title="Projects" />
+      <PagesMetaHead title="Blog" />
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -15,10 +15,10 @@ function index() {
           delay: 0.1
         }}
         className="container mx-auto">
-        <ProjectList />
+        <BlogList />
       </motion.div>
     </div>
   )
 }
 
-export default index
+export default blog

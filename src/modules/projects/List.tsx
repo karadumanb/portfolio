@@ -2,9 +2,9 @@ import { useState } from 'react'
 import { FiSearch } from 'react-icons/fi'
 import { projectsData } from './data'
 import ProjectsFilter from './Filter'
-import ProjectSingle from './Single'
+import ProjectItem from './Item'
 
-function ProjectsGrid() {
+function ProjectList() {
   const [query, setQuery] = useState<string>('')
   const [category, setCategory] = useState<string>('')
 
@@ -66,11 +66,11 @@ function ProjectsGrid() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6 sm:gap-5">
         {getFilteredProjects().map((project, index) => {
-          return <ProjectSingle key={index} project={project} />
+          return <ProjectItem key={index} project={project} />
         })}
       </div>
     </section>
   )
 }
 
-export default ProjectsGrid
+export default ProjectList
