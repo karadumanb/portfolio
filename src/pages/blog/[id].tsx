@@ -14,7 +14,7 @@ type Props = {
 
 function Blog({ blog, markdownSerializedResult }: Props) {
   return (
-    <div className="container mx-auto px-10" style={{ maxWidth: '52rem' }}>
+    <div className="container mx-auto px-2" style={{ maxWidth: '52rem' }}>
       <PagesMetaHead title={blog.title} />
 
       {/* Header */}
