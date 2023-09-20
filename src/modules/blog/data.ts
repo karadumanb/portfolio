@@ -14,5 +14,13 @@ export const blogsData: Blog[] = [
     slug: 'solid-in-typescript',
     textUrl: 'solid_in_react.md',
     imageUrl: 'solid-in-react.jpeg'
+  },
+  {
+    id: 3,
+    title: 'Building a Test Pyramid with React and Cypress',
+    summary: `Learn how to structure your testing strategy in React using the Test Pyramid concept. Start with fast and focused unit tests to cover individual components, followed by integration tests for component interactions. Finally, use Cypress for end-to-end (E2E) tests to simulate real user experiences. We provide practical examples for each layer, showcasing testing libraries like Jest and @testing-library/react for unit and integration tests, and Cypress for E2E tests. By adopting this pyramid-shaped approach, you can maintain a balance between comprehensive testing and efficient test execution, ensuring the reliability of your React applications.`,
+    slug: 'test-pyramid-with-react-and-cypress',
+    textUrl: 'test_pyramid_with_react_and_cypress.md',
+    imageUrl: 'test-pyramid-with-react-and-cypress.png'
   }
 ]
