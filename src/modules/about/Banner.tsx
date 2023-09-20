@@ -6,7 +6,7 @@ import Typed from 'react-typed'
 import useThemeSwitcher from '../../hooks/useThemeSwitcher'
 
 function Banner() {
-  const [activeTheme] = useThemeSwitcher()
+  const [theme] = useThemeSwitcher()
 
   return (
     <motion.section
@@ -72,7 +72,7 @@ function Banner() {
         transition={{ ease: 'easeInOut', duration: 0.9, delay: 0.2 }}
         className="w-full sm:w-2/3 text-right float-right mt-8 sm:mt-0">
         <img
-          src={getImageUrl(activeTheme === 'dark' ? 'developer.svg' : 'developer-dark.svg')}
+          src={getImageUrl(theme === 'light' ? 'developer.svg' : 'developer-dark.svg')}
           alt="Developer"
         />
       </motion.div>

@@ -12,7 +12,7 @@ import useModal from '@/hooks/useModal'
 function AppHeader() {
   const [showMenu, setShowMenu] = useState(false)
   const modalController = useModal()
-  const [activeTheme, setTheme] = useThemeSwitcher()
+  const [activeTheme, setTheme] = useThemeSwitcher(false)
 
   function toggleMenu() {
     if (!showMenu) {
@@ -40,10 +40,10 @@ function AppHeader() {
             {/* Theme switcher small screen */}
             <div
               //@ts-ignore
-              onClick={() => setTheme(activeTheme)}
+              onClick={() => setTheme()}
               aria-label="Theme Switcher"
               className="block sm:hidden ml-0 bg-primary-light dark:bg-ternary-dark p-3 shadow-sm rounded-xl cursor-pointer">
-              {activeTheme === 'dark' ? (
+              {activeTheme === 'light' ? (
                 <FiMoon className="text-ternary-dark hover:text-gray-400 dark:text-ternary-light dark:hover:text-primary-light text-xl" />
               ) : (
                 <FiSun className="text-gray-200 hover:text-gray-50 text-xl" />

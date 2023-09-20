@@ -115,7 +115,7 @@ export function PRE({ className, children, ...others }: PreProps) {
   return (
     <pre
       className={[
-        'overflow-scroll bg-black dark:bg-slate-400 text-sm dark:text-primary-dark text-primary-light',
+        'overflow-scroll bg-black dark:bg-slate-300 text-sm dark:text-primary-dark text-primary-light',
         className
       ]
         .filter(Boolean)

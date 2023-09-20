@@ -1,20 +1,27 @@
 import { useEffect, useState } from 'react'
 
-const useThemeSwitcher = () => {
+const useThemeSwitcher = (skipSetting = true) => {
   const [theme, setTheme] = useState<'light' | 'dark'>(
     typeof window !== 'undefined' ? localStorage.theme : ''
   )
-  const activeTheme = theme === 'dark' ? 'light' : 'dark'
+
+  const otherTheme = theme === 'dark' ? 'light' : 'dark'
+
+  const setAppTheme = () => {
+    setTheme(otherTheme)
+  }
 
   useEffect(() => {
-    const root = window.document.documentElement
+    if (!skipSetting) {
+      const root = window.document.documentElement
 
-    root.classList.remove(activeTheme)
-    root.classList.add(theme)
-    localStorage.setItem('theme', theme)
-  }, [theme, activeTheme])
+      root.classList.remove(otherTheme)
+      root.classList.add(theme)
+      localStorage.setItem('theme', theme)
+    }
+  }, [theme, otherTheme])
 
-  return [activeTheme as 'light' | 'dark', setTheme]
+  return [theme as 'light' | 'dark', setAppTheme]
 }
 
 export default useThemeSwitcher
