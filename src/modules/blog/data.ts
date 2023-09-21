@@ -22,5 +22,13 @@ export const blogsData: Blog[] = [
     slug: 'test-pyramid-with-react-and-cypress',
     textUrl: 'test_pyramid_with_react_and_cypress.md',
     imageUrl: 'test-pyramid-with-react-and-cypress.png'
+  },
+  {
+    id: 4,
+    title: 'Structuring a Scalable React Application',
+    summary: `In this blog, we've explored best practices for structuring a large React application using the Context API for state management while incorporating business entities into the folder structure. We've emphasized the importance of a well-organized project layout, breaking down components into entity-specific folders, and utilizing context providers and consumers to manage state. By adopting this structured approach, you can enhance maintainability and scalability, create entity-specific components and services, and seamlessly integrate them into your routing. These practices enable efficient development and collaboration, ultimately resulting in a robust and organized codebase tailored to your project's needs.`,
+    slug: 'structure-scalable-react-application',
+    textUrl: 'structure_scalable_react_application.md',
+    imageUrl: 'structure-scalable-react-application.jpeg'
   }
 ]
