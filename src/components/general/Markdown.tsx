@@ -27,7 +27,7 @@ const components = {
     className,
     ...others
   }: DetailedHTMLProps<LiHTMLAttributes<HTMLLIElement>, HTMLLIElement>) => (
-    <li className={[className, 'mb-2'].join(' ')} {...others} />
+    <li className={[className, 'mb-2', 'text-lg'].join(' ')} {...others} />
   ),
   code: ({ className, children }: ComponentProps<typeof PRE>) => {
     const language = (className || '').split('language-')[1]
