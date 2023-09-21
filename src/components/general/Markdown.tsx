@@ -7,15 +7,21 @@ interface Props extends ComponentProps<typeof MDXRemote> {}
 
 const components = {
   h1: H1,
-  h2: H2,
+  h2: ({ className, ...others }: ComponentProps<typeof H3>) => (
+    <H2 className={[className, 'mt-9'].join(' ')} {...others} />
+  ),
   h3: ({ className, ...others }: ComponentProps<typeof H3>) => (
     <H3 className={[className, 'mt-8'].join(' ')} {...others} />
   ),
   h4: ({ className, ...others }: ComponentProps<typeof H3>) => (
     <H4 className={[className, 'mt-5'].join(' ')} {...others} />
   ),
-  h5: H5,
-  h6: H6,
+  h5: ({ className, ...others }: ComponentProps<typeof H3>) => (
+    <H5 className={[className, 'mt-4'].join(' ')} {...others} />
+  ),
+  h6: ({ className, ...others }: ComponentProps<typeof H3>) => (
+    <H6 className={[className, 'mt-3'].join(' ')} {...others} />
+  ),
   p: Text,
   li: ({
     className,
